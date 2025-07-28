@@ -16,10 +16,10 @@ jobs:
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
     - name: Build Docker image
-      run: docker build -t yourname/yourapp:latest .
+      run: docker build -t bri1545/bri1545:latest .
 
     - name: Push image to DockerHub
-      run: docker push yourname/yourapp:latest
+      run: docker push bri1545/bri1545:latest
 
     - name: SSH and deploy
       uses: appleboy/ssh-action@v1.0.0
