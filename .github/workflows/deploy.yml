@@ -29,6 +29,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           docker pull bri1545/bri1545:latest
-          docker stop app || true && docker rm app || true
+          docker stop bri1545 || true && docker rm bri1545 || true
           docker run -d --name bri1545 -p 80:3000 bri1545/bri1545:latest
 
